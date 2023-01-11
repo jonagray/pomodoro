@@ -1,14 +1,33 @@
 const playButton = document.querySelector('.play');
 const pauseButton = document.querySelector('.pause');
 const resetButton = document.querySelector('.reset');
+let tomato1 = document.getElementById('tomato1');
+let tomato2 = document.getElementById('tomato2');
 
 playButton.addEventListener('click', start);
 pauseButton.addEventListener('click', pause);
 resetButton.addEventListener('click', reset);
+// tomato1.addEventListener('click', grow);
 
 let startTime;
 let elapsedTime = 0;
 let timerInterval;
+let growInterval;
+let scale = 1;
+
+// function grow(){
+//   let width = parseInt(tomato1.getAttribute("width"));
+//   let height = parseInt(tomato1.getAttribute("height"));
+//   width += 10;
+//   height += 10;
+//   tomato1.setAttribute("width", width);
+//   tomato1.setAttribute("height", height);
+// }
+
+function grow() {
+  scale += 0.1;
+  tomato1.style.transform = `scale(${scale})`;
+}
 
 //Convert time Hours/Minutes/Seconds format
 function timeToString(time) {
@@ -47,18 +66,34 @@ function start() {
   timerInterval = setInterval(function printTime() {
     elapsedTime = Date.now() - startTime;
     print(timeToString(elapsedTime))
-  }, 10)
+  }, 10);
+  growInterval = setInterval(grow, 100);
   showButton('pause');
 }
 
 function pause() {
   clearInterval(timerInterval);
+  clearInterval(growInterval);
   showButton('play');
 }
 
 function reset() {
   clearInterval(timerInterval);
+  clearInterval(growInterval);
   print('00:00:00');
   elapsedTime = 0;
+  scale = 1;
   showButton('play');
+  resetTomatoSize();
 }
+
+function resetTomatoSize() {
+  // let width = parseInt(tomato1.getAttribute("width"));
+  // let height = parseInt(tomato1.getAttribute("height"));
+  // width = 10;
+  // height = 10;
+  // tomato1.setAttribute("width", width);
+  // tomato1.setAttribute("height", height);
+  tomato1.style.transform = `scale(1)`;
+}
+
