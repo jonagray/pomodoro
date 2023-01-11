@@ -5,8 +5,12 @@ body {
   color: #fff;
 }
 
+.container {
+  display: flex;
+}
+
 h1 {
-  font-size: 48px;
+  font-size: 30px;
   font-family: 'Share Tech Mono', sans-serif;
   font-weight: 200;
   text-align: center;
@@ -16,12 +20,42 @@ h1 {
 }
 
 .stopwatch {
-  margin-top: 13rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+  /* border: solid 2px orange; */
+  /* margin-top: 13rem;
   display: grid;
   justify-items: center;
   grid-row-gap: 23px;
   width: 100%;
-  padding-top: 25px;
+  padding-top: 25px; */
+}
+
+#vine-container {
+  position: relative;
+  /* border: solid 2px red; */
+}
+
+#vine1 {
+  transform: rotate(45deg);
+}
+
+#tomato1 {
+  position: absolute;
+  top: 250px;
+  left: 400px;
+  transform-origin: top left;
+  /* height: 10px;
+  width: 10px; */
+}
+
+#tomato2 {
+  position: absolute;
+  top: 0;
+  transform-origin: top left;
 }
 
 .red {
@@ -50,6 +84,7 @@ h1 {
   display: flex;
   justify-content: center;
   width: 178px;
+  margin-top: 15px;
 }
 
 button {

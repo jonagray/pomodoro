@@ -9,22 +9,27 @@
   <script defer src="app.js"></script>
 </head>
 <body>
-
-  <div class="stopwatch">
-    <h1>Stopwatch <span class="red">Pomodoro</span></h1>
-
-    <div class="circle">
-      <span class="time" id="display">00:00:00</span>
+  <div class="container">
+    <div class="stopwatch">
+      <h1><span class="red">Pomodoro</span> Stopwatch</h1>
+      <div class="circle">
+        <span class="time" id="display">00:00:00</span>
+      </div>
+      <div class="controls">
+        <button>
+          <ion-icon class="play" name="play-outline"></ion-icon>
+          <ion-icon class="pause" name="pause-outline"></ion-icon>
+        </button>
+        <button>
+          <ion-icon class="reset" name="refresh-outline"></ion-icon>
+        </button>
+      </div>
     </div>
-
-    <div class="controls">
-      <button>
-        <ion-icon class="play" name="play-outline"></ion-icon>
-        <ion-icon class="pause" name="pause-outline"></ion-icon>
-      </button>
-      <button>
-        <ion-icon class="reset" name="refresh-outline"></ion-icon>
-      </button>
+    
+    <div id="vine-container">
+      <img id="vine1" src="assets/vine.png" height="500" width="500">
+      <img id="tomato1" src="assets/tomato-color.svg" height="10" width="10">
+      <!-- <img id="tomato2" src="assets/tomato-color.svg" height="10" width="10"> -->
     </div>
   </div>
 

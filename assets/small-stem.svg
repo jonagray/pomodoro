@@ -1,0 +1,15 @@
+<?xml version="1.0"?><svg width="816" height="1056" xmlns="http://www.w3.org/2000/svg">
+ <title>Small Stem</title>
+ <metadata id="">image/svg+xml</metadata>
+ <g>
+  <title>Stem</title>
+  <g externalResourcesRequired="false" id="small-stem">
+   <g id="svg_9">
+    <path fill="#007f00" stroke="#000000" stroke-width="5.337831" stroke-miterlimit="4" id="path3789" d="m29.166126,608.507813c-4.492474,213.67395 212.202435,246.178223 347.428905,311.327209c-35.978363,-133.598755 -124.597137,-309.07019 -347.428905,-311.327209z"/>
+    <path fill="#007f00" stroke="#000000" stroke-width="2.851429" stroke-miterlimit="4" d="m379.831146,924.020996c-38.39621,-3.313965 84.496185,-440.959991 35.180542,-756.959961c113.279266,212.135986 3.215668,760.273926 -35.180542,756.959961z" id="path32"/>
+    <path transform="rotate(14.4049 568.78 753.992)" fill="#007f00" stroke="#000000" stroke-width="5.352934" stroke-miterlimit="4" id="path38" d="m698.377991,545.724976c52.796021,261.643005 -131.923035,335.80304 -268.436005,416.535034c33.639008,-162.413025 8.632019,-363.476013 268.436005,-416.535034z"/>
+   </g>
+  </g>
+  <ellipse id="svg_2" cy="364" cx="338" stroke-width="5" stroke="#000000" fill="#3f007f"/>
+ </g>
+</svg>
