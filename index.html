@@ -7,30 +7,59 @@
   <title>Pomodoro Stopwatch</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="app.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
-  <div class="container">
-    <div class="stopwatch">
-      <h1><span class="red">Pomodoro</span> Stopwatch</h1>
-      <div class="circle">
-        <span class="time" id="display">00:00:00</span>
-      </div>
-      <div class="controls">
-        <button>
-          <ion-icon class="play" name="play-outline"></ion-icon>
-          <ion-icon class="pause" name="pause-outline"></ion-icon>
-        </button>
-        <button>
-          <ion-icon class="reset" name="refresh-outline"></ion-icon>
-        </button>
-      </div>
+  <div class="stopwatch">
+    <h1><span class="red">Pomodoro</span> Stopwatch</h1>
+    <div class="circle">
+      <span class="time" id="display">00:00:00</span>
     </div>
+    <div class="controls">
+      <button>
+        <ion-icon class="play" name="play-outline"></ion-icon>
+        <ion-icon class="pause" name="pause-outline"></ion-icon>
+      </button>
+      <button>
+        <ion-icon class="reset" name="refresh-outline"></ion-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="container">
     
     <div id="vine-container">
-      <img id="vine1" src="assets/vine.png" height="500" width="500">
-      <img id="tomato1" src="assets/tomato-color.svg" height="10" width="10">
-      <!-- <img id="tomato2" src="assets/tomato-color.svg" height="10" width="10"> -->
+      <img id="vine1" src="assets/vine.png" height="250" width="250">
+      <img id="tomato1" src="assets/tomato-color.svg" height="5" width="5">
+      <img id="tomato2" src="assets/tomato-color.svg" height="5" width="5">
+      <img id="tomato3" src="assets/tomato-color.svg" height="5" width="5">
+      <img id="tomato4" src="assets/tomato-color.svg" height="5" width="5">
     </div>
+
+    <div id="vine-container2">
+      <img id="vine2" src="assets/vine.png" height="250" width="250">
+      <img id="tomato5" src="assets/tomato-color.svg" height="5" width="5">
+      <img id="tomato6" src="assets/tomato-color.svg" height="5" width="5">
+      <img id="tomato7" src="assets/tomato-color.svg" height="5" width="5">
+      <img id="tomato8" src="assets/tomato-color.svg" height="5" width="5">
+    </div>
+
+    <div id="vine-container3">
+      <img id="vine3" src="assets/vine.png" height="250" width="250">
+      <img id="tomato9" src="assets/tomato-color.svg" height="5" width="5">
+      <img id="tomato5" src="assets/tomato-color.svg" height="5" width="5">
+      <img id="tomato11" src="assets/tomato-color.svg" height="5" width="5">
+      <img id="tomato12" src="assets/tomato-color.svg" height="5" width="5">
+    </div>
+
+    <div id="vine-container4">
+      <img id="vine4" src="assets/vine.png" height="250" width="250">
+      <img id="tomato13" src="assets/tomato-color.svg" height="5" width="5">
+      <img id="tomato14" src="assets/tomato-color.svg" height="5" width="5">
+      <img id="tomato15" src="assets/tomato-color.svg" height="5" width="5">
+      <img id="tomato16" src="assets/tomato-color.svg" height="5" width="5">
+    </div>
+
   </div>
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

@@ -1,8 +1,30 @@
+document.addEventListener("click", function(event) {
+  console.log("Clicked at: " + event.clientX + ", " + event.clientY);
+});
+
+
 const playButton = document.querySelector('.play');
 const pauseButton = document.querySelector('.pause');
 const resetButton = document.querySelector('.reset');
-let tomato1 = document.getElementById('tomato1');
-let tomato2 = document.getElementById('tomato2');
+
+const tomato1 = document.getElementById('tomato1');
+const tomato2 = document.getElementById('tomato2');
+const tomato3 = document.getElementById('tomato3');
+const tomato4 = document.getElementById('tomato4');
+const tomato5 = document.getElementById('tomato5');
+const tomato6 = document.getElementById('tomato6');
+const tomato7 = document.getElementById('tomato7');
+const tomato8 = document.getElementById('tomato8');
+const tomato9 = document.getElementById('tomato9');
+const tomato10 = document.getElementById('tomato10');
+const tomato11 = document.getElementById('tomato11');
+const tomato12 = document.getElementById('tomato12');
+const tomato13 = document.getElementById('tomato13');
+const tomato14 = document.getElementById('tomato14');
+const tomato15 = document.getElementById('tomato15');
+const tomato16 = document.getElementById('tomato16');
+
+let tomatoes = [tomato1, tomato2, tomato3, tomato4, tomato5, tomato6, tomato7, tomato8, tomato9, tomato10, tomato11, tomato12, tomato13, tomato14, tomato15, tomato16];
 
 playButton.addEventListener('click', start);
 pauseButton.addEventListener('click', pause);
@@ -14,6 +36,7 @@ let elapsedTime = 0;
 let timerInterval;
 let growInterval;
 let scale = 1;
+let counter = 0;
 
 // function grow(){
 //   let width = parseInt(tomato1.getAttribute("width"));
@@ -25,8 +48,18 @@ let scale = 1;
 // }
 
 function grow() {
-  scale += 0.1;
-  tomato1.style.transform = `scale(${scale})`;
+  if (scale <= 8.0) {
+    scale += 0.1;
+  } else {
+    scale = 1;
+    counter++;
+  }
+
+  if (counter >= tomatoes.length) {
+    counter = 0;
+  }
+
+  tomatoes[counter].style.transform = `scale(${scale})`;
 }
 
 //Convert time Hours/Minutes/Seconds format
@@ -67,7 +100,9 @@ function start() {
     elapsedTime = Date.now() - startTime;
     print(timeToString(elapsedTime))
   }, 10);
-  growInterval = setInterval(grow, 100);
+  // growInterval = setInterval(grow, 18.75*1000); should be the 25 min increment per tomato
+  growInterval = setInterval(grow, 10);
+
   showButton('pause');
 }
 
@@ -83,6 +118,7 @@ function reset() {
   print('00:00:00');
   elapsedTime = 0;
   scale = 1;
+  counter = 0;
   showButton('play');
   resetTomatoSize();
 }
@@ -94,6 +130,8 @@ function resetTomatoSize() {
   // height = 10;
   // tomato1.setAttribute("width", width);
   // tomato1.setAttribute("height", height);
-  tomato1.style.transform = `scale(1)`;
+  tomatoes.forEach(function(tomato) {
+    tomato.style.transform = `scale(1)`;
+  });
 }
 
